@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import logoImg from '../../assets/logos.jpg'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
 const Navber = () => {
+    const {logOut, user} = useContext(AuthContext)
+
+
     const navItem = <>
     <li><Link className="text-md font-semibold" to='/'>Home</Link></li>
     <li><Link className="text-md font-semibold" to='/about'>Create assignments</Link></li>
@@ -29,7 +34,21 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <Link to='/login' className="text-md font-semibold btn-primary text-white bg-gradient-to-r from-violet-500 to-violet-100 py-2 px-5 rounded-lg">Login</Link>
+            {
+                user?.email? 
+                    <>
+                        <button onClick={logOut} className="text-md font-semibold btn-primary text-white bg-gradient-to-r from-violet-500 to-violet-100 py-2 px-3 rounded-lg">LogOut</button> 
+                        <>
+                            {
+                                user.photoURL?
+                                <img className="h-10 rounded-full ml-2 border-2 border-violet-400" src={user.photoURL} alt="" />:
+                                <img className="h-10 rounded-full ml-2 border-2 border-violet-400" src="https://i.ibb.co/JrpCtmk/humanlogo.jpg" alt="" />
+                            }
+                        </>
+                    </>
+                :
+                    <Link to='/login' className="text-md font-semibold btn-primary text-white bg-gradient-to-r from-violet-500 to-violet-100 py-2 px-5 rounded-lg">Login</Link>
+            }
             </div>
             </div>
         </div>
