@@ -3,11 +3,12 @@ import logoImg from '../../assets/logos.jpg'
 const Navber = () => {
     const navItem = <>
     <li><Link className="text-md font-semibold" to='/'>Home</Link></li>
-    <li><Link className="text-md font-semibold" to='/about'>About</Link></li>
-    <li><Link className="text-md font-semibold" to='/login'>Login</Link></li>
+    <li><Link className="text-md font-semibold" to='/about'>Create assignments</Link></li>
+    <li><Link className="text-md font-semibold" to='/login'>My assignments</Link></li>
+    <li><Link className="text-md font-semibold" to='/login'>Assignments</Link></li>
     </>
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto px-3">
             <div className="navbar bg-base-100 h-20 pb-2">
             <div className="navbar-start">
                 <div className="dropdown">
