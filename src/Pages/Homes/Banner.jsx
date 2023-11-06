@@ -28,25 +28,25 @@ const Banner = () => {
         <div>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 container mx-auto lg:-mt-12 px-5 pb-16'>
             <div className='bg-white rounded-md shadow-xl text-center p-4'>
-                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center'><TbUserHeart></TbUserHeart></p>
+                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center hover:text-violet-600' ><TbUserHeart></TbUserHeart></p>
                 <h1 className='text-2xl font-semibold pb-2 '>Exclusive Advisor</h1>
                 <p className='font-semibold text-gray-400 pb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, recusandae!</p>
                 <button className='text-lg font-semibold text-violet-600 flex items-center gap-3 m-auto'>Get Started <BsArrowRight></BsArrowRight></button>
             </div>
             <div className='bg-white rounded-md shadow-xl text-center p-4'>
-                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center'><BsBookHalf></BsBookHalf></p>
+                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center hover:text-violet-600'><BsBookHalf></BsBookHalf></p>
                 <h1 className='text-2xl font-semibold pb-2'>Digital Library</h1>
                 <p className='font-semibold text-gray-400 pb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, recusandae!</p>
                 <button className='text-lg font-semibold text-violet-600 flex items-center gap-3 m-auto'>Get Started <BsArrowRight></BsArrowRight></button>
             </div>
             <div className='bg-white rounded-md shadow-xl text-center p-4'>
-                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center'><MdComputer></MdComputer></p>
+                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center hover:text-violet-600'><MdComputer></MdComputer></p>
                 <h1 className='text-2xl font-semibold pb-2'>Online Toturing</h1>
                 <p className='font-semibold text-gray-400 pb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, recusandae!</p>
                 <button className='text-lg font-semibold text-violet-600 flex items-center gap-3 m-auto'>Get Started <BsArrowRight></BsArrowRight></button>
             </div>
             <div className='bg-white rounded-md shadow-xl text-center p-4'>
-                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center'><PiChatCircleTextFill></PiChatCircleTextFill></p>
+                <p className='text-4xl pt-2 pb-2 m-auto flex justify-center hover:text-violet-600'><PiChatCircleTextFill></PiChatCircleTextFill></p>
                 <h1 className='text-2xl font-semibold pb-2'>Study Group</h1>
                 <p className='font-semibold text-gray-400 pb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, recusandae!</p>
                 <button className='text-lg font-semibold text-violet-600 flex items-center gap-3 m-auto'>Get Started <BsArrowRight></BsArrowRight></button>
