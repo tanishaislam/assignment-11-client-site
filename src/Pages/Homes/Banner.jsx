@@ -26,7 +26,7 @@ const Banner = () => {
         </div>
 
         <div>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 container mx-auto lg:-mt-12 px-5'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 container mx-auto lg:-mt-12 px-5 pb-16'>
             <div className='bg-white rounded-md shadow-xl text-center p-4'>
                 <p className='text-4xl pt-2 pb-2 m-auto flex justify-center'><TbUserHeart></TbUserHeart></p>
                 <h1 className='text-2xl font-semibold pb-2 '>Exclusive Advisor</h1>
