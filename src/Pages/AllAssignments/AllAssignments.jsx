@@ -15,12 +15,12 @@ const AllAssignments = () => {
 
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-20">
             <div className="overflow-x-auto">
-            <table className="table">
+            <table className="table ">
                 {/* head */}
                 <thead>
-                <tr>
+                <tr className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5">
                     <th>Assignment Title</th>
                     <th>Difficulty Level</th>
                     <th>Date</th>
