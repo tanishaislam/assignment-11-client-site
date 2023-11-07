@@ -9,9 +9,12 @@ const Navber = () => {
     const navItem = <>
     <li><Link className="text-md font-semibold" to='/'>Home</Link></li>
     <li><Link className="text-md font-semibold" to='/createAssaignment'>Create assignments</Link></li>
-    <li><Link className="text-md font-semibold" to='/login'>Assignments</Link></li>
+    {
+        user?.email?
+        <li><Link className="text-md font-semibold" to='/assignments'>My Assignments</Link></li>:''
+    }
     <li><Link className="text-md font-semibold" to='/login'>Submitted Assignments</Link></li>
-    <li><Link className="text-md font-semibold" to='/login'>My Assignments</Link></li>
+    <li><Link className="text-md font-semibold" to='/allAssignment'>Assignments</Link></li>
     </>
     return (
         <div className="container mx-auto px-3">

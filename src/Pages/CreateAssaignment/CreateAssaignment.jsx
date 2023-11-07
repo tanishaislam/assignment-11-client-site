@@ -31,7 +31,7 @@ const CreateAssaignment = () => {
             difficulty,
             discription, 
             startDate, 
-            user_email: user?.email,
+            email: user?.email,
         }
         console.log(order)
         fetch('http://localhost:5000/assignments',{
