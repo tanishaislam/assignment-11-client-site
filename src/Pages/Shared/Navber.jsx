@@ -11,6 +11,7 @@ const Navber = () => {
     <li><Link className="text-md font-semibold" to='/createAssaignment'>Create assignments</Link></li>
     <li><Link className="text-md font-semibold" to='/login'>Assignments</Link></li>
     <li><Link className="text-md font-semibold" to='/login'>Submitted Assignments</Link></li>
+    <li><Link className="text-md font-semibold" to='/login'>My Assignments</Link></li>
     </>
     return (
         <div className="container mx-auto px-3">

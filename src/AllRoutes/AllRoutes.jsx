@@ -5,6 +5,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import CreateAssaignment from "../Pages/CreateAssaignment/CreateAssaignment";
+import PrivateRoutes from "../Providers/PrivateRoutes";
 
 const myCreateRouter = createBrowserRouter([
     {
@@ -18,7 +19,9 @@ const myCreateRouter = createBrowserRouter([
         },
         {
           path: '/createAssaignment',
-          element:<CreateAssaignment></CreateAssaignment>
+          element:<PrivateRoutes>
+                    <CreateAssaignment></CreateAssaignment>
+                  </PrivateRoutes>
         },
         {
           path:'/login',

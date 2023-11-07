@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import logoImg from '../../assets/logos.jpg'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { AuthContext } from '../../Providers/AuthProviders';
+import toast from 'react-hot-toast';
 
 
 const CreateAssaignment = () => {
+    const {user} = useContext(AuthContext)
     const [startDate, setStartDate] = useState(new Date());
     
     // const [title, setTitle] = useState('');
@@ -21,7 +24,30 @@ const CreateAssaignment = () => {
         const mark = e.target.marks.value;
         const difficulty = e.target.difficulty.value;
         const discription = e.target.description.value;
-        console.log(title, imgURL,mark,difficulty,discription, startDate)
+        const order = {
+            title, 
+            imgURL,
+            mark,
+            difficulty,
+            discription, 
+            startDate, 
+            user_email: user?.email,
+        }
+        console.log(order)
+        fetch('http://localhost:5000/assignments',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                toast.success('Assignment is Successfully Created !')
+            }
+        })
     }
     return (
         <div>

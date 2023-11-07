@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import RegImg from '../../assets/login.jpg'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
+import toast from "react-hot-toast";
 
 const Register = () => {
     const {registerUser} = useContext(AuthContext)
@@ -11,18 +12,23 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [photoUrl, setPhotoUrl] = useState('');
+    const navigation = useNavigate();
 
     const handleRegister = async(e) =>{
         e.preventDefault();
+        const toastId = toast.loading('Logging in')
+
+
         if (!/^(?=.*[a-z])(?=.*[@$!%*#?&])[a-z\d@$!%*#?&]{6,}$/.test(password)) {
             return  setPassError('please write a valid password')              
           }
         try{
             await registerUser(email, password, photoUrl);
-            console.log('The user is created successfully')
+            toast.success('The user is created successfully...', {id: toastId})
+            navigation('/');
         }
-        catch (error){
-            console.log(error)
+        catch (err){
+            toast.error(err.message, {id: toastId})           
         }
     }
     return (

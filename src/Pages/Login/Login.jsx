@@ -1,22 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logImg from '../../assets/login.jpg'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
+import toast from "react-hot-toast";
 
 const Login = () => {
     const {googleSignIn, loginUser} = useContext(AuthContext)
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const navigation = useNavigate();
+    
     const handleLogin = async(e) =>{
         e.preventDefault();
+        const toastId = toast.loading('Logging in')
+
         try{
             await loginUser(email, password);
-            console.log('The user is Logged In successfully')
+            toast.success('The user is Logged In successfully...', {id: toastId})
+            navigation('/');
+            // console.log('The user is Logged In successfully')
         }
-        catch (error){
-            console.log(error)
+        catch (err){
+            toast.error(err.message, {id: toastId}) 
         }
     }
 
