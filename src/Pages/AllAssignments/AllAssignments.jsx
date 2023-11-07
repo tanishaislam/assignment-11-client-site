@@ -1,4 +1,5 @@
 import {  useEffect, useState } from "react";
+import AllAssignnentsRow from "./AllAssignnentsRow";
 
 
 const AllAssignments = () => {
@@ -14,40 +15,23 @@ const AllAssignments = () => {
 
 
     return (
-        <div>
+        <div className="container mx-auto">
             <div className="overflow-x-auto">
             <table className="table">
                 {/* head */}
                 <thead>
                 <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Job</th>
-                    <th>Favorite Color</th>
+                    <th>Assignment Title</th>
+                    <th>Difficulty Level</th>
+                    <th>Date</th>
+                    <th>Mark</th>
                 </tr>
                 </thead>
                 <tbody>
                 {/* row 1 */}
-                <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                </tr>
-                {/* row 2 */}
-                <tr className="hover">
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                </tr>
-                {/* row 3 */}
-                <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                </tr>
+                {
+                    allAssignment.map(allAsign => <AllAssignnentsRow key={allAsign._id} allAsign={allAsign}></AllAssignnentsRow>)
+                }
                 </tbody>
             </table>
             </div>
