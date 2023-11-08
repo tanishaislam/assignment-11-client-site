@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const AllAssignnentsRow = ({allAsign}) => {
-    const {title,difficulty,startDate, mark} = allAsign;
+    const {_id, title,difficulty,startDate, mark} = allAsign;
     return (
         <tr className='grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5'>
             <td>{title}</td>
@@ -10,7 +11,9 @@ const AllAssignnentsRow = ({allAsign}) => {
             <td>{startDate}</td>
             <td>{mark}</td>
             <th>
-            <button className='btn btn-ghost btn-xs btn-outline border-violet-600'>view assignment</button>
+            <Link to={`/details/${_id}`}>
+                <button className='btn btn-ghost btn-xs btn-outline border-violet-600'>view assignment</button>
+            </Link>
             </th>
             
         </tr>
