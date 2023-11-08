@@ -40,7 +40,8 @@ const AssignmentRow = ({assign, handleDelete}) => {
 };
 
 AssignmentRow.propTypes = {
-    assign: PropTypes.object
+    assign: PropTypes.object,
+    handleDelete: PropTypes.func
 }
 
 export default AssignmentRow;
