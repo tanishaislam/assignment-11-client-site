@@ -1,8 +1,12 @@
-# React + Vite
+# Website live link
+-
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Website fetures
+- Users can login to my website if they want.
+- Any user see my website home page and assignments page.
+- I have added many private routes to my website that only logged in users can see
+- Users can submmit assignment on my website.
+- Users can remove and update assignment to my website if they want.
+- If the user does not login then he will not be able to receive our event services.
+- Users can contact us if they want.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
