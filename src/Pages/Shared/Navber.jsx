@@ -11,7 +11,7 @@ const Navber = () => {
     <li><Link className="text-md font-semibold" to='/createAssaignment'>Create assignments</Link></li>
 
         <li><Link className="text-md font-semibold" to='/assignments'>My Assignments</Link></li>
-    <li><Link className="text-md font-semibold" to='/login'>Submitted Assignments</Link></li>
+    <li><Link className="text-md font-semibold" to='/submitAssignment'>Submitted Assignments</Link></li>
     <li><Link className="text-md font-semibold" to='/allAssignment'>Assignments</Link></li>
     </>
     return (

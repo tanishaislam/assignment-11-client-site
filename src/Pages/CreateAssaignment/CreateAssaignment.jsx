@@ -34,7 +34,7 @@ const CreateAssaignment = () => {
             email: user?.email,
         }
         console.log(order)
-        fetch('http://localhost:5000/assignments',{
+        fetch('https://assaignment-11-server-beige.vercel.app/assignments',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

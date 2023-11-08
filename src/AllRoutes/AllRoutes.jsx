@@ -40,12 +40,12 @@ const myCreateRouter = createBrowserRouter([
         {
           path:'/update/:id',
           element:<PrivateRoutes><UpdateAssign></UpdateAssign></PrivateRoutes>,
-          loader: ({params})=> fetch(`http://localhost:5000/assignments/${params.id}`)
+          loader: ({params})=> fetch(`https://assaignment-11-server-beige.vercel.app/assignments/${params.id}`)
         },
         {
           path:'/details/:id',
           element:<PrivateRoutes><AssignmentDetail></AssignmentDetail></PrivateRoutes>,
-          loader: ({params})=> fetch(`http://localhost:5000/assignments/${params.id}`)
+          loader: ({params})=> fetch(`https://assaignment-11-server-beige.vercel.app/assignments/${params.id}`)
         },
         {
           path:'/login',

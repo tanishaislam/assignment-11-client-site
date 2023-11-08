@@ -9,7 +9,7 @@ const ErrorPage = () => {
                 </div>
                 <p className=" text-xl text-violet-600 font-semibold pb-4">Page not found</p>
                 <p className=" text-md text-zinc-400 font-semibold pb-5">The page you are looking for does not exiest <br /> or an other error occurred</p>
-                <Link to='/' className="bg-violet-500 text-white py-1 px-5 rounded-lg ">Go Back Home</Link>
+                <Link to='/' className="border-violet-500 text-violet-600 font-semibold rounded-lg btn-outline btn">Go Back Home</Link>
             </div>
         </div>
     );

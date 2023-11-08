@@ -22,7 +22,7 @@ const AllAssignments = () => {
         }
     }
 
-    const url = `http://localhost:5000/assignments`
+    const url = `https://assaignment-11-server-beige.vercel.app/assignments`
     useEffect(()=>{
         fetch(url)
         .then(res => res.json())

@@ -2,6 +2,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged,
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import auth from "../firebase/firebase.config";
+import axios from "axios";
 
 
 
@@ -33,8 +34,24 @@ const AuthProviders = ({children}) => {
 
     useEffect(()=>{
         const subscribe =  onAuthStateChanged(auth, (currentUser)=>{
+
+            const userEmail = currentUser?.email || user?.email;
+            const loggedUser = {email: userEmail}
+
              setUser(currentUser);
              setIsLoading(false)
+             
+             if(currentUser){
+                axios.post('https://assaignment-11-server-beige.vercel.app/jwt',loggedUser, {withCredentials: true})
+                .then(res =>{
+                    console.log('token response', res.data)
+                })
+             }else{
+                axios.post('https://assaignment-11-server-beige.vercel.app/logout',loggedUser, {withCredentials: true})
+                .then(res =>{
+                    console.log('token response', res.data)
+                })
+             }
          });
          return ()=>{
              return subscribe();

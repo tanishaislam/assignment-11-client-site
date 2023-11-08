@@ -30,6 +30,7 @@ const Login = () => {
         googleSignIn()
         .then(result =>{
             console.log(result.user)
+            navigation('/');
         })
         .catch(error =>{
             console.error(error)           

@@ -8,7 +8,7 @@ const Assignments = () => {
     const {user} = useContext(AuthContext);
     const [assignment, setAssignment] = useState([]);
 
-    const url = `http://localhost:5000/assignments?email=${user?.email}`
+    const url = `https://assaignment-11-server-beige.vercel.app/assignments?email=${user?.email}`
     useEffect(()=>{
         fetch(url)
         .then(res => res.json())
@@ -16,7 +16,7 @@ const Assignments = () => {
     },[url])
 
     const handleDelete = id =>{
-            fetch(`http://localhost:5000/assignments/${id}`, {
+            fetch(`https://assaignment-11-server-beige.vercel.app/assignments/${id}`,  {credentials: 'include'}, {
                 method: 'DELETE'
             })
             .then(res => res.json())
